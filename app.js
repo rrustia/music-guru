@@ -10,8 +10,8 @@ function Song(name, path, incorrect) {
 function randomPos() {
   var randomFourNumbers = [];
   // algorithm to create random array of element containing four exclusive numbers.
-  while (randomFourNumbers.lenght < 5) {
-    var tempNum = Math.floor(Math.random() * 4);
+  while (randomFourNumbers.length < 5) {
+    var tempNum = Math.round(Math.random() * 4);
     if (!(randomFourNumbers.includes(tempNum))) {
       randomFourNumbers.push(tempNum);
     };
