@@ -11,7 +11,7 @@ function randomPos() {
   var randomFourNumbers = [];
   // algorithm to create random array of element containing four exclusive numbers.
   while (randomFourNumbers.length < 4) {
-    var tempNum = Math.round(Math.random() * 4);
+    var tempNum = Math.round(Math.random() * 3);
     if (!(randomFourNumbers.includes(tempNum))) {
       randomFourNumbers.push(tempNum);
     };
@@ -33,10 +33,17 @@ function renderChoices(randomArray) {
 // if user answered incorrectly then that LI element will be crossed out and will become unselectable
 // if user answered correctly then
 
+
+
+
 var randomList = 0;
 renderChoices(randomList);
-
-
+// kk();
+//
+// function kk(){
+//   var lol = document.getElementById('selection').value;
+//   alert(lol);
+// }
 
 // display the specific image index
 // function render(index, imgPos) {
