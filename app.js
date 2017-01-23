@@ -1,5 +1,11 @@
 'use strict';
 
+function Song(name, path, incorrect) {
+  this.name = name;
+  this.path = path;
+  this.incorrect = incorrect;
+}
+
 var audio = new Audio('audio/clip_anything_but_mine.mp3');
 audio.play();
 
