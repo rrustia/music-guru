@@ -1,5 +1,16 @@
 'use strict';
 
+//Implements name from input functionailty
+//Event listener
+var formEl = document.getElementById('name-form').addEventListener('submit', getName ,false);
+
+function getName(){
+  event.preventDefault();
+  event.stopPropagation();
+  var userName = event.target.name.value;
+  localStorage.setItem('name',userName);
+}
+
 function Song(name, path, incorrect) {
   this.name = name;
   this.path = path;
