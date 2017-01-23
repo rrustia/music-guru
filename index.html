@@ -20,7 +20,14 @@
 </header>
 <body>
   <main>
-    
+    <form id="name-form">
+      <fieldset>
+        <legend>Name</legend>
+        <label for="name">What is your name?</label>
+        <input name="name" id="name-input" required="required" pattern="[a-zA-Z]+" maxlength="12" placeholder="(Ex: John)" type="text"/>
+        <button id="submit-button">Submit</button>
+      </fieldset>
+    </form>
   </main>
 </body>
 </html>
