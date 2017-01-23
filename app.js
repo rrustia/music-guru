@@ -3,34 +3,38 @@
 function Song(name, path, incorrect) {
   this.name = name;
   this.path = path;
-  this.incorrect = incorrect;
+  this.incorrect = incorrect; //array of 3 incorrect strings
 }
 
-// test audio play command to be replaced with html5
-var audio = new Audio('audio/clip_anything_but_mine.mp3');
-audio.play();
-
-// random function to position randomize position of correct and incorrect answers
+// random function to create an array with 4 elements containing (0,1,2,3) that will determine the position of answer choices in html
 function randomPos() {
   var randomFourNumbers = [];
   // algorithm to create random array of element containing four exclusive numbers.
+  while (randomFourNumbers.lenght < 5) {
+    var tempNum = Math.floor(Math.random() * 4);
+    if (!(randomFourNumbers.includes(tempNum))) {
+      randomFourNumbers.push(tempNum);
+    };
+  };
   return randomFourNumbers;
 }
 
 // display choices by hooking up with specific LI element
 function renderChoices(randomArray) {
+  var randomList = [];
+  randomList = randomPos();
+  console.log(randomList);
   // render correct answer with using a random position
   // render first incorrect answer with random position
   // render second incorrect answer with random position
   // render third answer with random position
 }
 
-// if user answered incorrectly then that LI element will be crossed out
+// if user answered incorrectly then that LI element will be crossed out and will become unselectable
+// if user answered correctly then
 
-
-
-
-
+var randomList = 0;
+renderChoices(randomList);
 
 
 
