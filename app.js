@@ -6,8 +6,33 @@ function Song(name, path, incorrect) {
   this.incorrect = incorrect;
 }
 
+// test audio play command to be replaced with html5
 var audio = new Audio('audio/clip_anything_but_mine.mp3');
 audio.play();
+
+// random function to position randomize position of correct and incorrect answers
+function randomPos() {
+  var randomFourNumbers = [];
+  // algorithm to create random array of element containing four exclusive numbers.
+  return randomFourNumbers;
+}
+
+// display choices by hooking up with specific LI element
+function renderChoices(randomArray) {
+  // render correct answer with using a random position
+  // render first incorrect answer with random position
+  // render second incorrect answer with random position
+  // render third answer with random position
+}
+
+// if user answered incorrectly then that LI element will be crossed out
+
+
+
+
+
+
+
 
 // display the specific image index
 // function render(index, imgPos) {
