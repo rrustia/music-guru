@@ -1,3 +1,11 @@
 ul {
   list-style-type: none;
 }
+/*If input is correct, text field is green. Otherwise, text field is red.*/
+#name-input:focus:valid {
+	background: rgb(220, 255, 220);
+}
+
+#name-input:focus:invalid {
+	background: rgb(255, 232, 233);
+}
