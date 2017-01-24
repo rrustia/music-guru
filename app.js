@@ -11,10 +11,10 @@ function getName(){
   localStorage.setItem('name',userName);
 }
 
-function Song(name, path, incorrect) {
+function Song(name, path, answers) {
   this.name = name;
   this.path = path;
-  this.incorrect = incorrect; //array of 3 incorrect strings
+  this.answers = answers; //array of answer strings, first one is correct answer(index 0)
 }
 
 // random function to create an array with 4 elements containing (0,1,2,3) that will determine the position of answer choices in html
@@ -31,21 +31,26 @@ function randomPos() {
 }
 
 // display choices by hooking up with specific LI element
-function renderChoices(randomArray) {
+function renderChoices(song) {
   var randomList = [];
   randomList = randomPos();
   console.log(randomList);
-  // render correct answer with using a random position
-  // render first incorrect answer with random position
-  // render second incorrect answer with random position
-  // render third answer with random position
+  var genreEl = document.getElementById('classic-rock-question');
+  for (var i = 0; i < 4; i++) {
+    var listEl = document.write('input');
+    listEl.setAttribute('type', 'radio');
+    listEl.setAttribute('value', song.randomList[i]);
+    listEl.textContent(song.randomList[i]);
+  }
 }
 
-// if user answered incorrectly then that LI element will be crossed out and will become unselectable
-// if user answered correctly then
-
-
-
+// collaboration Eve, Castro, Ron
+var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night']);
+var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['Kenny Chesney - Anything But Mine']);
+var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['Capital Cities - Safe And Sound']);
+var edm = new Song('One More Time', 'audio/edm-clip-daf-punk.mp3', ['Daft Punk - One More Time']);
+var jazz = new Song('What a Wonderful World', 'audio/Louis-Armstrong-What-a-Wonderful-World.mp3', ['Louis Armstrong - What a Wonderful World']);
+var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['Salt-N-Pepa - Push It']);
 
 var randomList = 0;
 renderChoices(randomList);
