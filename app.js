@@ -1,22 +1,6 @@
 'use strict';
 
 //Implements name from input functionailty
-//Event listener
-//Collaboration Castro, Ron, Eve
-function displayAudioPlayer(){
-  var radioLoc = document.getElementById('audio-player');
-  var sound = document.createElement('audio');
-  sound.id = 'audio-player';
-  sound.controls = 'controls';
-  sound.src = '';
-  sound.type = 'audio/mpeg';
-  radioLoc.appendChild(sound);
-  console.log('inside of display audio player ');
-}
-if(document.getElementById('audio-player')) {
-  displayAudioPlayer();
-}
-
 if (document.getElementById('name-form')) {
   var formEl = document.getElementById('name-form').addEventListener('submit', getName ,false);
 }
@@ -54,15 +38,7 @@ function renderChoices(questionString, song) {
   var randomList = []; // this array will contain 4 numbers(0-3) that are mixed randomly
   randomList = randomPos();
   // show sound controls
-  var soundEl = document.getElementById('audio-player');
-  var audioEl = document.createElement('audio');
-  audioEl.setAttribute('controls', '');
-  var sourceEl =  document.createElement('source');
-  sourceEl.setAttribute('src', song.path);
-  sourceEl.setAttribute('type', 'audio/mpeg');
-  audioEl.appendChild(sourceEl);
-  soundEl.appendChild(audioEl);
-
+  displayAudioPlayer(song);
   // show choices menu
   var genreEl = document.getElementById(questionString);
   for (var i = 0; i < 4; i++) {
@@ -80,6 +56,22 @@ function renderChoices(questionString, song) {
   // buttonEl.textContent('Submit Answer');
   genreEl.appendChild(buttonEl);
 };
+
+//Event listener
+//Collaboration Castro, Ron, Eve
+function displayAudioPlayer(song){
+  var radioLoc = document.getElementById('audio-player');
+  var sound = document.createElement('audio');
+  sound.id = 'audio-player';
+  sound.controls = 'controls';
+  sound.src = song.path;
+  sound.type = 'audio/mpeg';
+  radioLoc.appendChild(sound);
+  console.log('inside of display audio player ');
+}
+// if(document.getElementById('audio-player')) {
+//   displayAudioPlayer(song);
+// }
 
 // collaboration Eve, Castro, Ron
 var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night', 'Blue Oster Cult - Don\'t Fear the Reaper', 'Aerosmith - Dream On', 'Fleetwood Mac - Go Your Own Way'], ['IWanna', 'Blue', 'Aerosmith', 'Fleetwood']);
@@ -159,3 +151,11 @@ determineGenre ();
 // };
 
 // newRound();
+// var soundEl = document.getElementById('audio-player');
+// var audioEl = document.createElement('audio');
+// audioEl.setAttribute('controls', '');
+// var sourceEl =  document.createElement('source');
+// sourceEl.setAttribute('src', song.path);
+// sourceEl.setAttribute('type', 'audio/mpeg');
+// audioEl.appendChild(sourceEl);
+// soundEl.appendChild(audioEl);
