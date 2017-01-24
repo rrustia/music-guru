@@ -1,0 +1,85 @@
+
+/*  Title:   font-family: 'Sofia', cursive;*/
+/*Body:    font-family: 'Rancho', cursive;*/
+/*Form:   font-family: 'Annie Use Your Telescope', cursive;*/
+
+
+/*background images for each genre page*/
+#classic-rock-background {
+
+  background-image: url(./pics/classic-rock.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#country-background {
+
+    background-image: url(./pics/country.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#edm-background {
+
+      background-image: url(./pics/edm.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+}
+
+#jazz-background {
+
+        background-image: url(./pics/jazz.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+}
+
+#pop-background {
+
+        background-image: url(./pics/pop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+}
+
+#rap-background {
+
+
+        background-image: url(./pics/rap.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+}
