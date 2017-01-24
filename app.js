@@ -11,8 +11,8 @@ function getName(){
   var userName = event.target.name.value;
   localStorage.setItem('name',userName);
 }
-//Gets input choices
 
+//Gets input choices
 // if (document.getElementById(questionString));
 //Ron, Castro, and Eve collaboration. Castro drives while Eve and Ron navigate
 function getInput(){
@@ -44,8 +44,8 @@ function isCorrect(song){
 
 // song object constructor
 function Song(name, path, answers, id, idTwo, formId) {
-  this.name = name;
-  this.path = path;
+  this.name = name; // name of the song
+  this.path = path; // filepath of the song
   this.answers = answers; //array of 4 answer strings
   this.id = id; //array of 4 ID strings
   this.idTwo = idTwo; //id for audio controls
@@ -58,6 +58,7 @@ function randomPos() {
   // algorithm to create random array of element containing four exclusive numbers.
   while (randomFourNumbers.length < 4) {
     var tempNum = Math.round(Math.random() * 3);
+    // if tempNum is not inside the randomFourNumbers array then push it inside randomFourNumbers[]
     if (!(randomFourNumbers.includes(tempNum))) {
       randomFourNumbers.push(tempNum);
     };
@@ -75,14 +76,14 @@ function renderChoices(questionString, song) {
   var genreEl = document.getElementById(questionString);
   for (var i = 0; i < 4; i++) {
     var listEl = document.createElement('input');
+    // set attribute of the Input tags that will be created.
+    // randomList[i]
     listEl.setAttribute('id', song.id[randomList[i]]);
     listEl.setAttribute('value', song.answers[randomList[i]]);
     listEl.setAttribute('type', 'radio');
     listEl.setAttribute('name', 'songName');
     listEl.setAttribute('checked','');
     listEl.setAttribute('class','tracks');
-    //console.log(listEl);
-    //console.log(listEl.value);
     genreEl.appendChild(listEl);
     $('input#' + song.id[randomList[i]]).after(song.answers[randomList[i]] + '<br>');
   };
