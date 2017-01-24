@@ -3,6 +3,20 @@
 //Implements name from input functionailty
 //Event listener
 //Collaboration Castro, Ron, Eve
+function displayAudioPlayer(){
+  var radioLoc = document.getElementById('audio-player');
+  var sound = document.createElement('audio');
+  sound.id = 'audio-player';
+  sound.controls = 'controls';
+  sound.src = '';
+  sound.type = 'audio/mpeg';
+  radioLoc.appendChild(sound);
+  console.log('inside of display audio player ');
+}
+if(document.getElementById('audio-player')) {
+  displayAudioPlayer();
+}
+
 if (document.getElementById('name-form')) {
   var formEl = document.getElementById('name-form').addEventListener('submit', getName ,false);
 }
@@ -40,7 +54,7 @@ function renderChoices(questionString, song) {
   var randomList = []; // this array will contain 4 numbers(0-3) that are mixed randomly
   randomList = randomPos();
   // show sound controls
-  var soundEl = document.getElementById('audioBlock');
+  var soundEl = document.getElementById('audio-player');
   var audioEl = document.createElement('audio');
   audioEl.setAttribute('controls', '');
   var sourceEl =  document.createElement('source');
@@ -63,7 +77,7 @@ function renderChoices(questionString, song) {
 
   var buttonEl = document.createElement('button');
   buttonEl.setAttribute('type', 'submit');
-  buttonEl.textContent('Submit Answer');
+  // buttonEl.textContent('Submit Answer');
   genreEl.appendChild(buttonEl);
 };
 
