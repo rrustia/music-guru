@@ -2,6 +2,7 @@
 
 //Implements name from input functionailty
 //Event listener
+//Collaboration Castro, Ron, Eve
 var formEl = document.getElementById('name-form').addEventListener('submit', getName ,false);
 
 function getName(){
@@ -45,12 +46,12 @@ function renderChoices(song) {
 }
 
 // collaboration Eve, Castro, Ron
-var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night']);
+var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night', 'Blue Oster Cult - Don\'t Fear the Reaper', 'Aerosmith - Dream On', 'Fleetwood Mac - Go Your Own Way']);
 var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['Kenny Chesney - Anything But Mine']);
-var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['Capital Cities - Safe And Sound']);
+var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['Capital Cities - Safe And Sound', 'The Weeknd - Staryboy', 'Alessia Cara - Scars to Your Beautiful', 'Shawn Mendes - Treat You Better']);
 var edm = new Song('One More Time', 'audio/edm-clip-daf-punk.mp3', ['Daft Punk - One More Time']);
 var jazz = new Song('What a Wonderful World', 'audio/Louis-Armstrong-What-a-Wonderful-World.mp3', ['Louis Armstrong - What a Wonderful World']);
-var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['Salt-N-Pepa - Push It']);
+var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['Salt-N-Pepa - Push It', 'Bell Biv Devoe - Poison', 'Drake - Hotline Bling', 'Vanilla Ice - Ice Ice Baby']);
 
 var randomList = 0;
 renderChoices(randomList);
