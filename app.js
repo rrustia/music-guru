@@ -77,7 +77,7 @@ function renderChoices(questionString, song) {
   for (var i = 0; i < 4; i++) {
     var listEl = document.createElement('input');
     // set attribute of the Input tags that will be created.
-    // randomList[i]
+    // randomList[i] will make sure the choices are random
     listEl.setAttribute('id', song.id[randomList[i]]);
     listEl.setAttribute('value', song.answers[randomList[i]]);
     listEl.setAttribute('type', 'radio');
@@ -85,20 +85,16 @@ function renderChoices(questionString, song) {
     listEl.setAttribute('checked','');
     listEl.setAttribute('class','tracks');
     genreEl.appendChild(listEl);
+    // use JQuery "after" method to add text after the "input" tag
     $('input#' + song.id[randomList[i]]).after(song.answers[randomList[i]] + '<br>');
   };
-
+  // if a particular form ID is present on the page then execute the particular listener
   if (document.getElementById(song.formId)){
     var formEl = document.getElementById(song.formId).addEventListener('submit', getInput, false);;
   }
-
-  // var buttonEl = document.createElement('button');
-  // buttonEl.setAttribute('type', 'submit');
-  // // buttonEl.textContent('Submit Answer');
-  // genreEl.appendChild(buttonEl);
 };
 
-//Event listener
+// Display the audio controls by hooking into tag with ID contained song.idTwo
 //Collaboration Castro, Ron, Eve
 function displayAudioPlayer(song){
   var radioLoc = document.getElementById(song.idTwo);
@@ -112,6 +108,7 @@ function displayAudioPlayer(song){
 }
 
 // collaboration Eve, Castro, Ron
+// initial data for song objects that includes song name, filepath, and possible answers
 var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night', 'Blue Oyster Cult - (Don\'t) Fear the Reaper', 'Aerosmith - Dream On', 'Fleetwood Mac - Go Your Own Way'], ['IWanna', 'Blue', 'Aerosmith', 'Fleetwood'],'classic-rock-radio','classic-rock-form');
 
 var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['Capital Cities - Safe And Sound', 'The Weeknd - Staryboy', 'Alessia Cara - Scars to Your Beautiful', 'Shawn Mendes - Treat You Better'], ['Safe', 'The', 'Alessia', 'Shawn'],'pop-radio','pop-form');
@@ -133,7 +130,7 @@ correctSongs.push(edm.answers[0]);
 correctSongs.push(jazz.answers[0]);
 
 function determineGenre () {
-// this boolean test will determine which genre page is currently loaded
+// this boolean test will determine which genre page is currently loaded and render the appropriate song object
   var questionString;
   if (document.getElementById('classic-rock-question')) {
     questionString = 'classic-rock-question';
@@ -161,4 +158,5 @@ function determineGenre () {
   };
 }
 
+// initiate genre when page is loaded.
 determineGenre ();
