@@ -3,7 +3,9 @@
 //Implements name from input functionailty
 //Event listener
 //Collaboration Castro, Ron, Eve
-var formEl = document.getElementById('name-form').addEventListener('submit', getName ,false);
+if (document.getElementById('name-form')) {
+  var formEl = document.getElementById('name-form').addEventListener('submit', getName ,false);
+}
 
 function getName(){
   event.preventDefault();
@@ -38,9 +40,9 @@ function renderChoices(song) {
   console.log(randomList);
   var genreEl = document.getElementById('classic-rock-question');
   for (var i = 0; i < 4; i++) {
-    var listEl = document.write('input');
+    var listEl = document.createElement('input');
     listEl.setAttribute('type', 'radio');
-    listEl.setAttribute('value', song.answers[randomList[i]]);
+    // listEl.setAttribute('value', song.answers[randomList[i]]);
     listEl.textContent(song.answers[randomList[i]]);
   }
 }
@@ -59,7 +61,7 @@ var edm = new Song('One More Time', 'audio/edm-clip-daft-punk.mp3', ['Daft Punk 
 var jazz = new Song('What a Wonderful World', 'audio/Louis-Armstrong-What-a-Wonderful-World.mp3', ['Louis Armstrong - What a Wonderful World','Getz and Gilberto - The Girl From Ipanema','Mingus Ah Um - Goodbye, Pork Pie Hat','That\'s All - Mack the Knife']);
 
 var randomList = 0;
-renderChoices(randomList);
+// renderChoices(randomList);
 // kk();
 //
 // function kk(){
