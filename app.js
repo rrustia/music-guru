@@ -109,9 +109,6 @@ function displayAudioPlayer(song){
   radioLoc.appendChild(sound);
   console.log('inside of display audio player ');
 }
-// if(document.getElementById('audio-player')) {
-//   displayAudioPlayer(song);
-// }
 
 // collaboration Eve, Castro, Ron
 var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night', 'Blue Oyster Cult - (Don\'t) Fear the Reaper', 'Aerosmith - Dream On', 'Fleetwood Mac - Go Your Own Way'], ['IWanna', 'Blue', 'Aerosmith', 'Fleetwood'],'classic-rock-radio','classic-rock-form');
@@ -164,46 +161,3 @@ function determineGenre () {
 }
 
 determineGenre ();
-
-// renderChoices(randomList);
-// kk();
-//
-// function kk(){
-//   var lol = document.getElementById('selection').value;
-//   alert(lol);
-// }
-
-// display the specific image index
-// function render(index, imgPos) {
-//   var tempObj = JSON.parse(localStorage[index]);
-//   tempObj.shownFreq++;
-//   localStorage[index] = JSON.stringify(tempObj);
-//   var displayEl = document.getElementById('image-row');
-//   var rowEl = document.createElement('button');
-//   rowEl.setAttribute('type', 'submit');
-//   // imgPos values: 0 = left, 1 =  center, 2 = right
-//   switch (imgPos) {
-//   case 'left': rowEl.setAttribute('class', 'float-left');
-//     break;
-//   case 'center': rowEl.setAttribute('class', 'float-center');
-//     break;
-//   case 'right': rowEl.setAttribute('class', 'float-right');
-//     break;
-//   default: break;
-//   }
-//   rowEl.setAttribute('onclick', 'targetString = \"' + tempObj.ID_string + '\"; newRound();');
-//   var imgEl = document.createElement('img');
-//   imgEl.setAttribute('src', tempObj.imgPath);
-//   rowEl.appendChild(imgEl);
-//   displayEl.appendChild(rowEl);
-// };
-
-// newRound();
-// var soundEl = document.getElementById('audio-player');
-// var audioEl = document.createElement('audio');
-// audioEl.setAttribute('controls', '');
-// var sourceEl =  document.createElement('source');
-// sourceEl.setAttribute('src', song.path);
-// sourceEl.setAttribute('type', 'audio/mpeg');
-// audioEl.appendChild(sourceEl);
-// soundEl.appendChild(audioEl);
