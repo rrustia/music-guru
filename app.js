@@ -17,17 +17,25 @@ function getName(){
 function getInput(){
   event.preventDefault();
   event.stopPropagation();
-  var choice = event.target.name.value;
-  console.log('Inside of getInput: ' + choice);
+  if(document.getElementsByClassName('tracks')){
+    console.log('Found radio buttons!');
+    var trackArr = document.getElementsByClassName('tracks');
+    for(var i = 0; i < trackArr.length; i++){
+      if(trackArr[i].checked){
+        console.log('Inside of getInput: ' + trackArr[i].value);
+      }
+    }
+  }
 }
 
 // song object constructor
-function Song(name, path, answers, id, idTwo) {
+function Song(name, path, answers, id, idTwo, formId) {
   this.name = name;
   this.path = path;
   this.answers = answers; //array of 4 answer strings
   this.id = id; //array of 4 ID strings
   this.idTwo = idTwo; //id for audio controls
+  this.formId = formId; //form id for each genre
 }
 
 // random function to create an array with 4 random elements containing (0,1,2,3) that will determine the position of answer choices in html
@@ -58,12 +66,16 @@ function renderChoices(questionString, song) {
     listEl.setAttribute('type', 'radio');
     listEl.setAttribute('name', 'songName');
     listEl.setAttribute('checked','');
+    listEl.setAttribute('class','tracks');
+    //console.log(listEl);
+    //console.log(listEl.value);
     genreEl.appendChild(listEl);
     $('input#' + song.id[randomList[i]]).after(song.answers[randomList[i]] + '<br>');
-    if (document.getElementById('jazz-form')){
-      var formEl = document.getElementById('jazz-form').addEventListener('submit', getInput, false);;
-    }
   };
+
+  if (document.getElementById(song.formId)){
+    var formEl = document.getElementById(song.formId).addEventListener('submit', getInput, false);;
+  }
 
   // var buttonEl = document.createElement('button');
   // buttonEl.setAttribute('type', 'submit');
@@ -88,17 +100,17 @@ function displayAudioPlayer(song){
 // }
 
 // collaboration Eve, Castro, Ron
-var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night', 'Blue Oster Cult - Don\'t Fear the Reaper', 'Aerosmith - Dream On', 'Fleetwood Mac - Go Your Own Way'], ['IWanna', 'Blue', 'Aerosmith', 'Fleetwood'],'classic-rock-radio');
+var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night', 'Blue Oster Cult - Don\'t Fear the Reaper', 'Aerosmith - Dream On', 'Fleetwood Mac - Go Your Own Way'], ['IWanna', 'Blue', 'Aerosmith', 'Fleetwood'],'classic-rock-radio','classic-rock-form');
 
-var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['Capital Cities - Safe And Sound', 'The Weeknd - Staryboy', 'Alessia Cara - Scars to Your Beautiful', 'Shawn Mendes - Treat You Better'], ['Safe', 'The', 'Alessia', 'Shawn'],'pop-radio');
+var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['Capital Cities - Safe And Sound', 'The Weeknd - Staryboy', 'Alessia Cara - Scars to Your Beautiful', 'Shawn Mendes - Treat You Better'], ['Safe', 'The', 'Alessia', 'Shawn'],'pop-radio','pop-form');
 
-var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['Salt-N-Pepa - Push It', 'Bell Biv Devoe - Poison', 'Drake - Hotline Bling', 'Vanilla Ice - Ice Ice Baby'], ['Push', 'Bell', 'Poison', 'Drake'],'rap-radio');
+var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['Salt-N-Pepa - Push It', 'Bell Biv Devoe - Poison', 'Drake - Hotline Bling', 'Vanilla Ice - Ice Ice Baby'], ['Push', 'Bell', 'Poison', 'Drake'],'rap-radio','rap-form');
 
-var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['Kenny Chesney - Anything But Mine','Taylor Swift - Bad Blood', 'Garth Brooks - Friends In Low Places','Luke Bryan - Country Girl (Shake It For Me)'], ['Anything', 'Taylor', 'Garth', 'Luke'],'country-radio');
+var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['Kenny Chesney - Anything But Mine','Taylor Swift - Bad Blood', 'Garth Brooks - Friends In Low Places','Luke Bryan - Country Girl (Shake It For Me)'], ['Anything', 'Taylor', 'Garth', 'Luke'],'country-radio','country-form');
 
-var edm = new Song('One More Time', 'audio/edm-clip-daft-punk.mp3', ['Daft Punk - One More Time','The Chainsmokers - Closer','Daft Punk - Get Lucky','Major Lazer & DJ Snake - Lean On'], ['Daft', 'The', 'Daf', 'Major'],'edm-radio');
+var edm = new Song('One More Time', 'audio/edm-clip-daft-punk.mp3', ['Daft Punk - One More Time','The Chainsmokers - Closer','Daft Punk - Get Lucky','Major Lazer & DJ Snake - Lean On'], ['Daft', 'The', 'Daf', 'Major'],'edm-radio','edm-form');
 
-var jazz = new Song('What a Wonderful World', 'audio/Louis-Armstrong-What-a-Wonderful-World.mp3', ['Louis Armstrong - What a Wonderful World','Getz and Gilberto - The Girl From Ipanema','Mingus Ah Um - Goodbye, Pork Pie Hat','That\'s All - Mack the Knife'], ['What', 'Getz', 'Mingus', 'That'],'jazz-radio');
+var jazz = new Song('What a Wonderful World', 'audio/Louis-Armstrong-What-a-Wonderful-World.mp3', ['Louis Armstrong - What a Wonderful World','Getz and Gilberto - The Girl From Ipanema','Mingus Ah Um - Goodbye, Pork Pie Hat','That\'s All - Mack the Knife'], ['What', 'Getz', 'Mingus', 'That'],'jazz-radio','jazz-form');
 
 function determineGenre () {
 // this boolean test will determine which genre page is currently loaded
