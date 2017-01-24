@@ -6,7 +6,7 @@ if(localStorage.length > 0) {
   console.log('Name.html location for p element: ' + nameContainerEl );
   var paraEl = document.createElement('p');
   //Adds id for styling purposes
-  p.setAttribute('id','persistent-name');
+  paraEl.setAttribute('id','persistent-name');
   //Create text node
   var text = document.createTextNode(localStorage.getItem('name'));
   paraEl.appendChild(text);
