@@ -10,6 +10,31 @@ ul {
 	background: rgb(255, 232, 233);
 }
 
+#home-background {
+
+  background-image: url(./pics/background-home.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#about-background {
+
+  background-image: url(./pics/about-us.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
 
 /*  Title:   font-family: 'Sofia', cursive;*/
 /*Body:    font-family: 'Rancho', cursive;*/
