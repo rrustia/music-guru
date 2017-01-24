@@ -40,8 +40,8 @@ function renderChoices(song) {
   for (var i = 0; i < 4; i++) {
     var listEl = document.write('input');
     listEl.setAttribute('type', 'radio');
-    listEl.setAttribute('value', song.randomList[i]);
-    listEl.textContent(song.randomList[i]);
+    listEl.setAttribute('value', song.answers[randomList[i]]);
+    listEl.textContent(song.answers[randomList[i]]);
   }
 }
 
