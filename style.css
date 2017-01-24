@@ -1,6 +1,51 @@
-ul {
-  list-style-type: none;
+
+header {
+
+  font-family: 'Rancho', cursive;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+
+
 }
+
+.nav-bar {
+
+text-align: center;
+display: inline-block;
+padding-left: 1em;
+padding-right: 1em;
+
+}
+
+#nav-logo {
+
+
+}
+
+h1 {
+
+  font-family: 'Sofia', cursive;
+  font-size: 35px;
+  display: inline;
+  padding-left: 1em;
+  padding-right: 1em;
+
+}
+
+
+ul {
+
+  list-style-type: none;
+
+}
+
+#nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 /*If input is correct, text field is green. Otherwise, text field is red.*/
 #name-input:focus:valid {
 	background: rgb(220, 255, 220);
