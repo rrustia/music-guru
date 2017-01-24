@@ -11,6 +11,15 @@ function getName(){
   var userName = event.target.name.value;
   localStorage.setItem('name',userName);
 }
+//Gets input choices
+
+// if (document.getElementById(questionString));
+function getInput(){
+  event.preventDefault();
+  event.stopPropagation();
+  var choice = event.target.name.value;
+  console.log('Inside of getInput: ' + choice);
+}
 
 // song object constructor
 function Song(name, path, answers, id, idTwo) {
@@ -48,14 +57,18 @@ function renderChoices(questionString, song) {
     listEl.setAttribute('value', song.answers[randomList[i]]);
     listEl.setAttribute('type', 'radio');
     listEl.setAttribute('name', 'songName');
+    listEl.setAttribute('checked','');
     genreEl.appendChild(listEl);
     $('input#' + song.id[randomList[i]]).after(song.answers[randomList[i]] + '<br>');
+    if (document.getElementById('jazz-form')){
+      var formEl = document.getElementById('jazz-form').addEventListener('submit', getInput, false);;
+    }
   };
 
-  var buttonEl = document.createElement('button');
-  buttonEl.setAttribute('type', 'submit');
-  // buttonEl.textContent('Submit Answer');
-  genreEl.appendChild(buttonEl);
+  // var buttonEl = document.createElement('button');
+  // buttonEl.setAttribute('type', 'submit');
+  // // buttonEl.textContent('Submit Answer');
+  // genreEl.appendChild(buttonEl);
 };
 
 //Event listener
