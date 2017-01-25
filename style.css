@@ -1,12 +1,17 @@
 
+/*Castro and Eve collaborating on index styling*/
 header {
 
   font-family: 'Rancho', cursive;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-
+  background-color: #DADFF7;
+  opacity: 0.8;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
 
 }
 
@@ -19,15 +24,16 @@ padding-right: 1em;
 
 }
 
-#nav-logo {
 
+/*#nav-logo {
 
-}
+display: inline-block;
+}*/
 
 h1 {
 
   font-family: 'Sofia', cursive;
-  font-size: 35px;
+  font-size: 40px;
   display: inline;
   padding-left: 1em;
   padding-right: 1em;
@@ -41,9 +47,62 @@ ul {
 
 }
 
-#nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap {
+#nav-about, #nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap, #nav-edm {
+
+  color: #333399;
   padding-left: 1em;
   padding-right: 1em;
+  text-decoration: none;
+
+}
+
+#intro {
+  /*background-color: #84DCC6;*/
+  background-color: #84DCC6;
+  opacity: 0.7;
+  font-family: 'Rancho', cursive;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 5em;
+  margin-left: 15em;
+  margin-right: 15em;
+  padding: 2em;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+
+}
+
+fieldset {
+
+border: none;
+margin-top: 1em;
+padding-top: 2em;
+padding-bottom: 2.2em;
+
+}
+
+legend {
+
+visibility: hidden;
+
+}
+#name-form {
+
+  background-color: #C9B1BD;
+  opacity: 0.8;
+
+}
+
+#name-top {
+  margin-left: 8em;
+  width: 50%;
+
+}
+
+#submit-button {
+
+
 }
 
 /*If input is correct, text field is green. Otherwise, text field is red.*/

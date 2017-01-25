@@ -16,7 +16,7 @@
 <header>
   <nav>
     <!-- Ron, Keith, Castro and Eve collaborated html scaffolding -->
-    <ul class="nav-bar">
+   <ul class="nav-bar">
       <a id="nav-index" href="index.html">Home</a>
       <a id="nav-about" href="about.html">About Us</a>
       <h1>Music Guru</h1>
@@ -30,14 +30,14 @@
   </nav>
 </header>
 <body id="home-background">
-  <p id="intro">Welcome to the Music Guru!  This is a trivia game for your listening and guessing pleasure!</p>
+  <p id="intro">Welcome to the Music Guru!  <br>This is a trivia game for your listening and guessing pleasure!</p>
   <main>
     <form id="name-form">
       <fieldset>
         <legend>Name</legend>
-        <label for="name">What is your name?</label>
-        <input name="name" id="name-input" required="required" pattern="[a-zA-Z]+" maxlength="12" placeholder="(Ex: John)" type="text"/>
-        <button id="submit-button">Submit</button>
+        <label id="name-top" for="name">What is your name?</label>
+        <br><input name="name" id="name-input" required="required" pattern="[a-zA-Z]+" maxlength="12" placeholder="(Ex: John)" type="text"/>
+        <br><button id="submit-button">Submit</button>
         <span id="post-submit-mess"></span>
       </fieldset>
     </form>
