@@ -42,19 +42,28 @@ function getInput(){
 function isCorrect(song){
   console.log('Inside of isCorrect: ' + song);
   //List gets next song
+  //console.log('Inside of isCorrect (nextPageCount): ' + nextPageCount);
   getNextPage(song.value);
   if(correctSongs.includes(song.value)){
-    alert('Correct.');
     //Redirects to next genre page
+    alert('Correct.');
     document.location.href = getNextPage(song.value);;
   } else {
+    //Redirects to next genre page
+    //console.log('Inside of isCorrect: ' + nextPageCount);
     alert('Incorrect.');
-    document.location.href = getNextPage(song.value);;
+    // console.log('Inside of isCorrect: ' + nextPageCount);
+    if(getNextPage(song.value) === 'about.html'){
+      document.location.href = getNextPage(song.value);
+    } else {
+      document.location.href = getNextPage(song.value);
+    }
   }
 }
 //Helper function determines next song
 function getNextPage(song){
   var url = '';
+  //Global var nextPageCount - increments when user gets to next page
   for (var i = 0; i < listOfSongs.length; i++){
     console.log('Inside of getNextPage: ' + song);
     if(listOfSongs[i].answers.includes(song)){
@@ -64,6 +73,7 @@ function getNextPage(song){
         return url;
         break;
       } else {
+        return 'about.html';
         console.log('Inside of getNextPage: Last page');
       }
     }
@@ -138,18 +148,18 @@ function displayAudioPlayer(song){
 
 // collaboration Eve, Castro, Ron
 // initial data for song objects that includes song name, filepath, and possible answers
-var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night', 'Blue Oyster Cult - (Don\'t) Fear the Reaper', 'Aerosmith - Dream On', 'Fleetwood Mac - Go Your Own Way'], ['IWanna', 'Blue', 'Aerosmith', 'Fleetwood'],'classic-rock-radio','classic-rock-form','classic-rock.html');
+var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['"I Wanna Rock And Roll All Night" by Kiss', '"(Don\'t) Fear the Reaper" by Blue Oyster Cult', '"Dream On" by Aerosmith', '"Go Your Own Way" by Fleetwood Mac'], ['IWanna', 'Blue', 'Aerosmith', 'Fleetwood'],'classic-rock-radio','classic-rock-form','classic-rock.html');
 //console.log('After rock instance: ' + rock.sitePath);
 
-var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['Capital Cities - Safe And Sound', 'The Weeknd - Staryboy', 'Alessia Cara - Scars to Your Beautiful', 'Shawn Mendes - Treat You Better'], ['Safe', 'The', 'Alessia', 'Shawn'],'pop-radio','pop-form','pop.html');
+var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['"Safe And Sound" by Capital Cities', '"Starboy" by The Weeknd', '"Scars to Your Beautiful" by Alessia Cara', '"Treat You Better" by Shawn Mendes'], ['Safe', 'The', 'Alessia', 'Shawn'],'pop-radio','pop-form','pop.html');
 
-var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['Salt-N-Pepa - Push It', 'Bell Biv Devoe - Poison', 'Drake - Hotline Bling', 'Vanilla Ice - Ice Ice Baby'], ['Push', 'Bell', 'Poison', 'Drake'],'rap-radio','rap-form','rap.html');
+var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['"Push It" by Salt-N-Pepa', '"Poison" by Bell Biv Devoe', '"Hotline Bling" by Drake', '"Ice Ice Baby" by Vanilla Ice'], ['Push', 'Bell', 'Poison', 'Drake'],'rap-radio','rap-form','rap.html');
 
-var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['Kenny Chesney - Anything But Mine','Taylor Swift - Bad Blood', 'Garth Brooks - Friends In Low Places','Luke Bryan - Country Girl (Shake It For Me)'], ['Anything', 'Taylor', 'Garth', 'Luke'],'country-radio','country-form','country.html');
+var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['"Anything But Mine" by Kenny Chesney','"Bad Blood" by Taylor Swift', '"Friends In Low Places" by Garth Brooks','"Country Girl (Shake It For Me) by "Luke Bryan'], ['Anything', 'Taylor', 'Garth', 'Luke'],'country-radio','country-form','country.html');
 
-var edm = new Song('One More Time', 'audio/edm-clip-daft-punk.mp3', ['Daft Punk - One More Time','The Chainsmokers - Closer','Daft Punk - Get Lucky','Major Lazer & DJ Snake - Lean On'], ['Daft', 'The', 'Daf', 'Major'],'edm-radio','edm-form','edm.html');
+var edm = new Song('One More Time', 'audio/edm-clip-daft-punk.mp3', ['"One More Time" by Daft Punk','"Closer" by The Chainsmokers','"Get Lucky" by Daft Punk','"Lean On" by Major Lazer & DJ Snake'], ['Daft', 'The', 'Daf', 'Major'],'edm-radio','edm-form','edm.html');
 
-var jazz = new Song('What a Wonderful World', 'audio/Louis-Armstrong-What-a-Wonderful-World.mp3', ['Louis Armstrong - What a Wonderful World','Getz and Gilberto - The Girl From Ipanema','Mingus Ah Um - Goodbye, Pork Pie Hat','That\'s All - Mack the Knife'], ['What', 'Getz', 'Mingus', 'That'],'jazz-radio','jazz-form','jazz.html');
+var jazz = new Song('What a Wonderful World', 'audio/Louis-Armstrong-What-a-Wonderful-World.mp3', ['"What a Wonderful World" by Louis Armstrong','"The Girl From Ipanema" by Getz and Gilberto','"Goodbye, Pork Pie Hat" by Mingus Ah Um','That\'s All - Mack the Knife'], ['What', 'Getz', 'Mingus', 'That'],'jazz-radio','jazz-form','jazz.html');
 //Global answerArr
 var correctSongs = [];
 correctSongs.push(country.answers[0]);
@@ -158,7 +168,6 @@ correctSongs.push(edm.answers[0]);
 correctSongs.push(pop.answers[0]);
 correctSongs.push(jazz.answers[0]);
 correctSongs.push(rap.answers[0]);
-
 
 var listOfSongs = [];
 listOfSongs.push(country);
