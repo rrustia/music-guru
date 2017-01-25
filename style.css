@@ -1,5 +1,6 @@
 
 /*Castro and Eve collaborating on index styling*/
+/*header and nav-bar targeted to achieve proper coloring and padding*/
 header {
 
   font-family: 'Rancho', cursive;
@@ -7,8 +8,8 @@ header {
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-  background-color: #DADFF7;
-  opacity: 0.8;
+  background-color: #B8E1FF;
+  opacity: 0.7;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -25,31 +26,36 @@ padding-right: 1em;
 }
 
 
-/*#nav-logo {
+#logo {
 
 display: inline-block;
-}*/
 
+}
+
+/*Music Guru title in Nav-bar*/
 h1 {
 
   font-family: 'Sofia', cursive;
   font-size: 40px;
+  color: black;
+  opacity: none;
   display: inline;
   padding-left: 1em;
   padding-right: 1em;
 
 }
 
-
+/*nav-bar list*/
 ul {
 
   list-style-type: none;
 
 }
 
+/*target different items in nav bar for detailed stlying*/
 #nav-about, #nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap, #nav-edm {
 
-  color: #333399;
+  color: #AA0D86;
   padding-left: 1em;
   padding-right: 1em;
   text-decoration: none;
@@ -57,15 +63,17 @@ ul {
 }
 
 #intro {
-  /*background-color: #84DCC6;*/
-  background-color: #84DCC6;
+
+  background-color: #BCB6FF;
   opacity: 0.7;
   font-family: 'Rancho', cursive;
   font-size: 25px;
+  color: black;
   text-align: center;
-  margin-top: 5em;
-  margin-left: 15em;
+  margin-top: 3em;
   margin-right: 15em;
+  margin-bottom: 2.5em;
+  margin-left: 15em;
   padding: 2em;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
@@ -76,9 +84,15 @@ ul {
 fieldset {
 
 border: none;
-margin-top: 1em;
-padding-top: 2em;
-padding-bottom: 2.2em;
+font-family: 'Annie Use Your Telescope', cursive;
+font-size: 25px;
+text-align: center;
+padding-bottom: 1em;
+background-color: #A9FFF7;
+opacity: 0.7;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+border-radius: 16px;
 
 }
 
@@ -87,21 +101,21 @@ legend {
 visibility: hidden;
 
 }
-#name-form {
+#name-form{
 
-  background-color: #C9B1BD;
-  opacity: 0.8;
-
-}
-
-#name-top {
-  margin-left: 8em;
-  width: 50%;
+  margin-top: 1em;
 
 }
-
 #submit-button {
 
+background-color: #9894D3;
+font-family: 'Annie Use Your Telescope', cursive;
+font-size: 20px;
+font-weight: bold;
+opacity: 0.7%;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
 
 }
 
