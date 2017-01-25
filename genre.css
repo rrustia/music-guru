@@ -104,14 +104,19 @@ header {
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-
+  background-color: white;
+  opacity: 0.7;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
 
 }
 
-#nav-logo {
 
+/*#nav-logo {
 
-}
+display: inline-block;
+}*/
 
 h1 {
 
@@ -130,7 +135,11 @@ ul {
 
 }
 
-#nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap {
+#nav-about, #nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap, #nav-edm {
+
+  color: #333399;
   padding-left: 1em;
   padding-right: 1em;
+  text-decoration: none;
+
 }
