@@ -1,13 +1,21 @@
 
 /*Castro and Eve collaborating on index styling*/
 /*header and nav-bar targeted to achieve proper coloring and padding*/
+body {
+margin-top: 0px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+
+}
+
 header {
 
   font-family: 'Rancho', cursive;
   font-size: 25px;
   text-align: center;
-  padding-left: 1em;
   padding-right: 1em;
+  padding-left: 1em;
   background-color: #B8E1FF;
   opacity: 0.7;
   -webkit-border-radius: 20px;
@@ -22,13 +30,6 @@ text-align: center;
 display: inline-block;
 padding-left: 1em;
 padding-right: 1em;
-
-}
-
-
-#logo {
-
-display: inline-block;
 
 }
 
@@ -56,8 +57,8 @@ ul {
 #nav-about, #nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap, #nav-edm {
 
   color: #AA0D86;
-  padding-left: 1em;
   padding-right: 1em;
+  padding-left: 1em;
   text-decoration: none;
 
 }
@@ -72,13 +73,25 @@ ul {
   text-align: center;
   margin-top: 3em;
   margin-right: 15em;
-  margin-bottom: 2.5em;
+  margin-bottom: 0.5em;
   margin-left: 15em;
-  padding: 2em;
+  padding-top: 0.5em;
+  padding-right: 2em;
+  padding-bottom: 0;
+  padding-left: 2em;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   border-radius: 16px;
+  min-width: 20%;
 
+}
+
+#logo {
+
+display: inline-block;
+height: 50%;
+width: 50%;
+opacity: 2;
 }
 
 fieldset {
@@ -87,7 +100,8 @@ border: none;
 font-family: 'Annie Use Your Telescope', cursive;
 font-size: 25px;
 text-align: center;
-padding-bottom: 1em;
+margin-top: 2em;
+padding-top: 0;
 background-color: #A9FFF7;
 opacity: 0.7;
 -webkit-border-radius: 16px;
