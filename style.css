@@ -11,19 +11,30 @@ margin-left: auto;
 
 header {
 
-  font-family: 'Rancho', cursive;
-  font-size: 25px;
+  font-family: 'Smythe', cursive;;
+  font-size: 30px;
   text-align: center;
   margin-top: 0;
   padding-right: 1em;
   padding-left: 1em;
 
-
 }
 
+#logo {
+padding-top: 0;
+padding-right: 2em;
+padding-left: 0;
+height: 10%;
+width: 10%;
+opacity: 0.9;
+float: left;
+
+}
+/*nav bar styling Castro and Eve Collaboration*/
 nav {
 
-  margin-top: 0;
+  margin-top: 1em;
+  float: left;
 }
 .nav-bar {
 
@@ -32,15 +43,6 @@ display: inline-block;
 margin-top: 0;
 padding-left: 1em;
 padding-right: 1em;
-
-}
-
-#logo {
-
-padding-right: 2em;
-padding-left: 0;
-height: 8%;
-width: 8%;
 
 }
 
@@ -74,16 +76,18 @@ ul {
 
 }
 
-
+/*name input box styling*/
 fieldset {
 
 border: none;
 font-family: 'Annie Use Your Telescope', cursive;
 color: white;
-font-size: 30px;
+font-size: 40px;
 text-align: center;
 margin-top: 2em;
 padding-top: 0;
+margin-left: 20%;
+margin-right: 20%;
 
 
 }
@@ -104,6 +108,13 @@ display: block;
   margin-top: 1em;
 
 }
+
+#submit-button:hover{
+
+  background-color: #1C2541;
+
+}
+
 #submit-button {
 
 background-color: inherit;
@@ -116,9 +127,9 @@ padding: 0;
 
 #submit-button-text {
 
-  font-family: 'Rancho', cursive;
+  font-family: 'Smythe', cursive;
   color: #89FC00;
-  font-size: 22px;
+  font-size: 25px;
   padding-top: 0;
   padding-right: 1em;
   padding-bottom: 0;
