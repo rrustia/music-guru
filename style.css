@@ -14,18 +14,33 @@ header {
   font-family: 'Rancho', cursive;
   font-size: 25px;
   text-align: center;
+  margin-top: 0;
   padding-right: 1em;
   padding-left: 1em;
 
 
 }
 
+nav {
+
+  margin-top: 0;
+}
 .nav-bar {
 
 text-align: center;
 display: inline-block;
+margin-top: 0;
 padding-left: 1em;
 padding-right: 1em;
+
+}
+
+#logo {
+
+padding-right: 2em;
+padding-left: 0;
+height: 8%;
+width: 8%;
 
 }
 
@@ -52,21 +67,13 @@ ul {
 /*target different items in nav bar for detailed stlying*/
 #nav-about, #nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap, #nav-edm {
 
-  color: #C7EDF0;
-  padding-right: 1em;
-  padding-left: 1em;
+  color: #DDFFF7;
+  padding-right: 0.7em;
+  padding-left: 0.7em;
   text-decoration: none;
 
 }
 
-
-/*#logo {
-
-display: inline-block;
-height: 50%;
-width: 50%;
-opacity: 2;
-}*/
 
 fieldset {
 
@@ -101,21 +108,28 @@ display: block;
 
 background-color: inherit;
 border-radius: 0;
-border: 3px white ridge;
+border: 3px #89FC00 ridge;
+margin-top: 1.5em;
 padding: 0;
 
 }
 
 #submit-button-text {
 
-  font-family: 'Annie Use Your Telescope', cursive;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
+  font-family: 'Rancho', cursive;
+  color: #89FC00;
+  font-size: 22px;
   padding-top: 0;
   padding-right: 1em;
   padding-bottom: 0;
   padding-left: 1em;
+}
+
+#name-input {
+
+  border-radius: 5px;
+  min-width: 250px;
+  min-height: 30px;
 }
 /*If input is correct, text field is green. Otherwise, text field is red.*/
 #name-input:focus:valid {
@@ -141,7 +155,7 @@ padding: 0;
 
 #about-background {
 
-  background-image: url(./pics/about-us.jpg);
+  background-image: url(./pics/about-us-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
