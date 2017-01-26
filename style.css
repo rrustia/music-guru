@@ -176,20 +176,40 @@ padding: 0;
   background-size: cover;
 
 }
+
 /*p elements on about.html*/
-.about-us-blurb {
+
+#about-us-blurb {
+  background-color: yellow;
+  display: inline-block;
+}
+#about-us-blurb li {
+  background-color: red;
+  list-style-type: none;
+  padding-top: 1em;
   font-family: 'Annie Use Your Telescope', cursive;
-  background-color: lime;
-  font-size: 1.2em;
-  width: 400px;
-  display: block;
+  color:white;
+  width:400px;
+
 }
-/*main tag on about.html*/
-#about-us-container-one {
-  width: 50%;
-  background: #ffa7a7;
+
+#about-us-pics {
+  background-color: green;
+  display: inline-block;
+}
+#about-us-pics li{
+  background-color: blue;
+  list-style-type: none;
+}
+
+#ul-wrapper {
+  background-color: pink;
   margin: auto;
+  width: 90%;
+  clear: both;
+  text-align: center;
 }
+
 
 
 /*  Title:   font-family: 'Sofia', cursive;*/
