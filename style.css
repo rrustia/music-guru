@@ -11,8 +11,8 @@ margin-left: auto;
 
 header {
 
-  font-family: 'Rancho', cursive;
-  font-size: 25px;
+  font-family: 'Smythe', cursive;;
+  font-size: 30px;
   text-align: center;
   margin-top: 0;
   padding-right: 1em;
@@ -39,8 +39,9 @@ padding-right: 1em;
 
 padding-right: 2em;
 padding-left: 0;
-height: 8%;
-width: 8%;
+height: 10%;
+width: 10%;
+opacity: 0.8;
 
 }
 
@@ -74,13 +75,13 @@ ul {
 
 }
 
-
+/*name input box styling*/
 fieldset {
 
 border: none;
 font-family: 'Annie Use Your Telescope', cursive;
 color: white;
-font-size: 30px;
+font-size: 40px;
 text-align: center;
 margin-top: 2em;
 padding-top: 0;
@@ -116,9 +117,9 @@ padding: 0;
 
 #submit-button-text {
 
-  font-family: 'Rancho', cursive;
+  font-family: 'Smythe', cursive;
   color: #89FC00;
-  font-size: 22px;
+  font-size: 25px;
   padding-top: 0;
   padding-right: 1em;
   padding-bottom: 0;
