@@ -16,7 +16,7 @@ margin-left: auto;
 
 header {
 
-  font-family: 'Smythe', cursive;;
+  font-family: 'Smythe', cursive;
   font-size: 30px;
   text-align: center;
   margin-top: 0;
@@ -87,7 +87,7 @@ ul {
 #persistent-name {
 
 font-family: 'Annie Use Your Telescope', cursive;
-font-size: 40px;
+font-size: 30px;
 color:white;
 clear: left;
 text-align: center;
@@ -109,6 +109,9 @@ border-radius: 0;
 border: 3px #89FC00 ridge;
 margin-top: 1.5em;
 padding: 0;
+margin-left: 30%;
+margin-right: 30%;
+
 
 }
 
@@ -123,6 +126,30 @@ padding: 0;
   padding-left: 1em;
 }
 
+#audio-player {
+
+  margin-left: 41%;
+  margin-right: 41%;
+  margin-bottom: 1em;
+  border: 4px #EAF0CE outset;
+  border-radius: 10px;
+  opacity: 0.9;
+
+}
+
+fieldset {
+
+ font-family: 'Smythe', cursive;
+ font-size: 25px;
+ background-color: black;
+ opacity: 0.7;
+ margin-left: 35%;
+ margin-right: 35%;
+ border: 4px none;
+ border-radius: 5px;
+ padding: 1em;
+
+}
 
 /*background images for each genre page*/
 #classic-rock-background {
@@ -154,6 +181,7 @@ padding: 0;
     background-size: cover;
 
 }
+
 
 
 #edm-background {
