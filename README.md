@@ -14,7 +14,14 @@ For this particular project, the problem domain will be as follows:<br>
 
 ## Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+This sample code illustrates one of the limitations we encountered in Javascript.<br>
+
+using JQuery standard library via linked:<br>
+https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js<br>
+
+  $('input#' + song.id[randomList[i]]).after(song.answers[randomList[i]]);
+
+Encountered problem in Javascript shows that certain tags does not allow the JS textContent method to be applied to it's dynamic rendering in JS. This code from JQuery solved this problem nicely with the "after" library method.<br>
 
 ## Motivation
 
