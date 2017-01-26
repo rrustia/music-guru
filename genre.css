@@ -95,6 +95,35 @@ margin-left: 40%;
 margin-right: 40%;
 }
 
+/*submit button styling*/
+#submit-button:hover{
+
+  background-color: #1C2541;
+
+}
+
+#submit-button {
+
+background-color: inherit;
+border-radius: 0;
+border: 3px #89FC00 ridge;
+margin-top: 1.5em;
+padding: 0;
+
+}
+
+#submit-button-text {
+
+  font-family: 'Smythe', cursive;
+  color: #89FC00;
+  font-size: 25px;
+  padding-top: 0;
+  padding-right: 1em;
+  padding-bottom: 0;
+  padding-left: 1em;
+}
+
+
 /*background images for each genre page*/
 #classic-rock-background {
 
