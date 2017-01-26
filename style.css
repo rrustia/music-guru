@@ -1,84 +1,90 @@
 
 /*Castro and Eve collaborating on index styling*/
+/*header and nav-bar targeted to achieve proper coloring and padding*/
+body {
+margin-top: 0px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+
+}
+
 header {
 
   font-family: 'Rancho', cursive;
   font-size: 25px;
   text-align: center;
-  padding-left: 1em;
+  margin-top: 0;
   padding-right: 1em;
-  background-color: #DADFF7;
-  opacity: 0.8;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  padding-left: 1em;
+
 
 }
 
+nav {
+
+  margin-top: 0;
+}
 .nav-bar {
 
 text-align: center;
 display: inline-block;
+margin-top: 0;
 padding-left: 1em;
 padding-right: 1em;
 
 }
 
+#logo {
 
-/*#nav-logo {
+padding-right: 2em;
+padding-left: 0;
+height: 8%;
+width: 8%;
 
-display: inline-block;
-}*/
+}
 
+/*Music Guru title in Nav-bar*/
 h1 {
 
   font-family: 'Sofia', cursive;
   font-size: 40px;
+  color: white;
+  opacity: none;
   display: inline;
   padding-left: 1em;
   padding-right: 1em;
 
 }
 
-
+/*nav-bar list*/
 ul {
 
   list-style-type: none;
 
 }
 
+/*target different items in nav bar for detailed stlying*/
 #nav-about, #nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap, #nav-edm {
 
-  color: #333399;
-  padding-left: 1em;
-  padding-right: 1em;
+  color: #DDFFF7;
+  padding-right: 0.7em;
+  padding-left: 0.7em;
   text-decoration: none;
 
 }
 
-#intro {
-  /*background-color: #84DCC6;*/
-  background-color: #84DCC6;
-  opacity: 0.7;
-  font-family: 'Rancho', cursive;
-  font-size: 25px;
-  text-align: center;
-  margin-top: 5em;
-  margin-left: 15em;
-  margin-right: 15em;
-  padding: 2em;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
-
-}
 
 fieldset {
 
 border: none;
-margin-top: 1em;
-padding-top: 2em;
-padding-bottom: 2.2em;
+font-family: 'Annie Use Your Telescope', cursive;
+color: white;
+font-size: 30px;
+text-align: center;
+margin-top: 2em;
+padding-top: 0;
+
 
 }
 
@@ -87,24 +93,44 @@ legend {
 visibility: hidden;
 
 }
-#name-form {
 
-  background-color: #C9B1BD;
-  opacity: 0.8;
+#name-line-break {
 
-}
-
-#name-top {
-  margin-left: 8em;
-  width: 50%;
+display: block;
 
 }
+#name-form{
 
+  margin-top: 1em;
+
+}
 #submit-button {
 
+background-color: inherit;
+border-radius: 0;
+border: 3px #89FC00 ridge;
+margin-top: 1.5em;
+padding: 0;
 
 }
 
+#submit-button-text {
+
+  font-family: 'Rancho', cursive;
+  color: #89FC00;
+  font-size: 22px;
+  padding-top: 0;
+  padding-right: 1em;
+  padding-bottom: 0;
+  padding-left: 1em;
+}
+
+#name-input {
+
+  border-radius: 5px;
+  min-width: 250px;
+  min-height: 30px;
+}
 /*If input is correct, text field is green. Otherwise, text field is red.*/
 #name-input:focus:valid {
 	background: rgb(220, 255, 220);
@@ -116,7 +142,7 @@ visibility: hidden;
 
 #home-background {
 
-  background-image: url(./pics/background-home.jpg);
+  background-image: url(./pics/background-home-3.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -129,7 +155,7 @@ visibility: hidden;
 
 #about-background {
 
-  background-image: url(./pics/about-us.jpg);
+  background-image: url(./pics/about-us-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -148,13 +174,14 @@ visibility: hidden;
   display: block;
 }
 /*main tag on about.html*/
-#about-us-main {
-  margin: auto;
+#about-us-container-one {
   width: 50%;
-  background-color: yellow;
+  background: #ffa7a7;
+  margin: auto;
 }
 
 
 /*  Title:   font-family: 'Sofia', cursive;*/
 /*Body:    font-family: 'Rancho', cursive;*/
 /*Form:   font-family: 'Annie Use Your Telescope', cursive;*/
+/*Submit: font-family: 'Smythe', cursive;*/
