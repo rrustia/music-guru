@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Guru | Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Title font -->
+  <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+  <!-- Body font -->
+  <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+  <!-- Form font -->
+  <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
+  <!-- submit button font -->
+  <link href="https://fonts.googleapis.com/css?family=Smythe" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./pics/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./pics/favicomatic/favicon-16x16.png" sizes="16x16" />
+</head>
+<header>
+    <a href="index.html"><img id="logo" src="./pics/logo-small-light.png"></a>
+  <nav>
+   <!-- Ron, Keith, Castro and Eve collaborated html scaffolding -->
+   <ul class="nav-bar">
+      <a id="nav-index" href="index.html">Home</a>
+      <a id="nav-about" href="about.html">About Us</a>
+      <h1>Music Guru</h1>
+      <a id="nav-country" href="country.html">Country</a>
+      <a id="nav-class-rock" href="classic-rock.html">Classic Rock</a>
+      <a id="nav-edm" href="edm.html">EDM</a>
+      <a id="nav-pop" href="pop.html">Pop</a>
+      <a id="nav-jazz" href="jazz.html">Jazz</a>
+      <a id="nav-rap" href="rap.html">Rap</a>
+    </ul>
+  </nav>
+</header>
+<body id="home-background">
+  <main>
+    <form id="name-form">
+      <fieldset>
+        <legend>Name</legend>
+        <label id="name-top" for="name">Welcome to Music Guru, the Music Trivia Game!<span id="name-line-break"></span>Let's Begin!<span id="name-line-break"></span>Please Tell us Your Name:</label>
+        <br><input name="name" id="name-input" required="required" pattern="[a-zA-Z]+" maxlength="12" placeholder="(Ex: John)" type="text"/>
+        <br><button id="submit-button"><span id="submit-button-text">ACTIVATE GURU</span></button>
+        <span id="post-submit-mess"></span>
+      </fieldset>
+    </form>
+  </main>
+</body>
+<script src="test-name.js"></script>
+<script src="test.js"></script>
+</html>
