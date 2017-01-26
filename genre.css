@@ -4,6 +4,80 @@
 /*Form:   font-family: 'Annie Use Your Telescope', cursive;*/
 
 
+/*header and nav-bar targeted to achieve proper coloring and padding*/
+
+body {
+margin-top: 0px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+
+}
+
+header {
+
+  font-family: 'Rancho', cursive;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 0;
+  padding-right: 1em;
+  padding-left: 1em;
+
+
+}
+
+nav {
+
+  margin-top: 0;
+}
+.nav-bar {
+
+text-align: center;
+display: inline-block;
+margin-top: 0;
+padding-left: 1em;
+padding-right: 1em;
+
+}
+
+#logo {
+
+padding-right: 2em;
+padding-left: 0;
+height: 8%;
+width: 8%;
+
+}
+
+/*Music Guru title in Nav-bar*/
+h1 {
+
+  font-family: 'Sofia', cursive;
+  font-size: 40px;
+  color: white;
+  opacity: none;
+  display: inline;
+  padding-left: 1em;
+  padding-right: 1em;
+
+}
+
+/*nav-bar list*/
+ul {
+
+  list-style-type: none;
+
+}
+
+/*target different items in nav bar for detailed stlying*/
+#nav-about, #nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap, #nav-edm {
+
+  color: #DDFFF7;
+  padding-right: 0.7em;
+  padding-left: 0.7em;
+  text-decoration: none;
+
+}
 /*background images for each genre page*/
 #classic-rock-background {
 
@@ -82,64 +156,5 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-
-}
-
-
-
-
-.nav-bar {
-
-text-align: center;
-display: inline-block;
-padding-left: 1em;
-padding-right: 1em;
-
-}
-
-header {
-
-  font-family: 'Rancho', cursive;
-  font-size: 20px;
-  text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  background-color: white;
-  opacity: 0.7;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-
-}
-
-
-/*#nav-logo {
-
-display: inline-block;
-}*/
-
-h1 {
-
-  font-family: 'Sofia', cursive;
-  font-size: 35px;
-  display: inline;
-  padding-left: 1em;
-  padding-right: 1em;
-
-}
-
-
-ul {
-
-  list-style-type: none;
-
-}
-
-#nav-about, #nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap, #nav-edm {
-
-  color: #333399;
-  padding-left: 1em;
-  padding-right: 1em;
-  text-decoration: none;
 
 }
