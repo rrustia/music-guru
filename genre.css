@@ -145,7 +145,8 @@ fieldset {
  font-family: 'Annie Use Your Telescope', cursive;
  font-size: 30px;
  background-color: black;
- opacity: 0.9;
+ opacity: 0.8;
+ margin-top: 1em;
  margin-left: 35%;
  margin-right: 35%;
  border: 4px black inset;

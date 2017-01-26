@@ -82,10 +82,11 @@ fieldset {
 border: none;
 font-family: 'Annie Use Your Telescope', cursive;
 color: white;
+font-weight: bold;
 font-size: 45px;
 text-align: center;
 margin-top: 0em;
-padding-top: 2.8em;
+padding-top: 2.5em;
 margin-left: 20%;
 margin-right: 20%;
 
