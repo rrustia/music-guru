@@ -35,6 +35,7 @@ nav {
 
   margin-top: 1em;
   float: left;
+
 }
 .nav-bar {
 
@@ -82,10 +83,11 @@ fieldset {
 border: none;
 font-family: 'Annie Use Your Telescope', cursive;
 color: white;
+font-weight: bold;
 font-size: 45px;
 text-align: center;
 margin-top: 0em;
-padding-top: 2.8em;
+padding-top: 2.5em;
 margin-left: 20%;
 margin-right: 20%;
 
@@ -98,7 +100,7 @@ visibility: hidden;
 
 }
 
-#name-line-break {
+.name-line-break {
 
 display: block;
 
@@ -147,11 +149,19 @@ padding: 0;
 }
 /*If input is correct, text field is green. Otherwise, text field is red.*/
 #name-input:focus:valid {
-	background: rgb(220, 255, 220);
+  background-image: url(./pics/Checked.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+	background-color: rgb(220, 255, 220);
+  background-position: right;
 }
 
 #name-input:focus:invalid {
-	background: rgb(255, 232, 233);
+  background-image: url(./pics/cancel.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: right;
+	background-color:rgb(255, 232, 233);
 }
 
 #home-background {
@@ -179,19 +189,41 @@ padding: 0;
   background-size: cover;
 
 }
+
 /*p elements on about.html*/
-.about-us-blurb {
-  font-family: 'Annie Use Your Telescope', cursive;
-  background-color: lime;
-  font-size: 1.2em;
-  width: 400px;
-  display: block;
+
+#about-us-container {
+
+  position: fixed;
+
 }
-/*main tag on about.html*/
-#about-us-container-one {
-  width: 50%;
-  background: #ffa7a7;
-  margin: auto;
+#about-us-images {
+
+  display: inline-block;
+  float:left;
+  padding-left: 0.5em;
+  padding-right: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+
+p {
+
+  margin-left: 5%;
+  margin-right: 40%;
+  padding: 1em;
+  font-family: 'Annie Use Your Telescope', cursive;
+  color: white;
+  font-size: 25px;
+  background-color: black;
+  opacity: 0.8;
+  border: 5px black solid;
+  border-radius: 6px;
+  display: inline-block;
+  float: left;
+  text-align: justify;
+  clear: left;
 }
 
 
