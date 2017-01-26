@@ -8,7 +8,7 @@ if(localStorage.length > 0) {
   //Adds id for styling purposes
   paraEl.setAttribute('id','persistent-name');
   //Create text node
-  var text = document.createTextNode('Hi, ' + localStorage.getItem('name') + '! What song is this? (Be sure to press play before you answer.)');
+  var text = document.createTextNode('Hi, ' + localStorage.getItem('name') + '! Please press play, select your answer, and submit to test your inner Guru!');
   paraEl.appendChild(text);
   nameContainerEl.appendChild(paraEl);
 }

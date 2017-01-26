@@ -41,7 +41,7 @@ nav {
 
   margin-top: 1em;
   float: left;
-} 
+}
 .nav-bar {
 
 text-align: center;
@@ -82,6 +82,19 @@ ul {
   text-decoration: none;
 
 }
+
+/*name rendered onto genre page*/
+#persistent-name {
+
+font-family: 'Annie Use Your Telescope', cursive;
+font-size: 40px;
+color:white;
+clear: left;
+text-align: center;
+margin-left: 40%;
+margin-right: 40%;
+}
+
 /*background images for each genre page*/
 #classic-rock-background {
 
