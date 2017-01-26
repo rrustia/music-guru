@@ -148,10 +148,12 @@ visibility: hidden;
   display: block;
 }
 /*main tag on about.html*/
-#about-us-main {
-  margin: auto;
-  width: 50%;
-  background-color: yellow;
+#about-us-container-one {
+  clear: left;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  background: #ffa7a7;
 }
 
 
