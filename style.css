@@ -35,6 +35,7 @@ nav {
 
   margin-top: 1em;
   float: left;
+
 }
 .nav-bar {
 
@@ -82,10 +83,11 @@ fieldset {
 border: none;
 font-family: 'Annie Use Your Telescope', cursive;
 color: white;
+font-weight: bold;
 font-size: 45px;
 text-align: center;
 margin-top: 0em;
-padding-top: 2.8em;
+padding-top: 2.5em;
 margin-left: 20%;
 margin-right: 20%;
 
@@ -190,41 +192,40 @@ padding: 0;
 
 /*p elements on about.html*/
 
-.p-wrapper {
-  background-color: pink;
-  margin: auto;
-  width: 90%;
+#about-us-container {
+
+  position: fixed;
+
+}
+#about-us-images {
+
+  display: inline-block;
+  float:left;
+  padding-left: 0.5em;
+  padding-right: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+
+p {
+
+  margin-left: 5%;
+  margin-right: 40%;
+  padding: 1em;
   font-family: 'Annie Use Your Telescope', cursive;
-  text-align: center;
-  clear:both;
-}
-/*Havinghttps://jsfiddle.net/W74Z8/753/*/
-
-.float-my-child-elements > *{
-    float:right;
-    margin-left:5px;
-}
-
-/* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
-
-.clearfix {
-    *zoom:1 /* for IE */
+  color: white;
+  font-size: 25px;
+  background-color: black;
+  opacity: 0.8;
+  border: 5px black solid;
+  border-radius: 6px;
+  display: inline-block;
+  float: left;
+  text-align: justify;
+  clear: left;
 }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.right-align {
-  text-align: right;
-  display:inline-block;
-}
 
 /*  Title:   font-family: 'Sofia', cursive;*/
 /*Body:    font-family: 'Rancho', cursive;*/
