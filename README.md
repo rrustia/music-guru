@@ -6,11 +6,11 @@ Mentally, this project is to test our ability to work as a group. And also to sh
 For this particular project, the problem domain will be as follows,
 
 *User Stories:
-1. As a developer, I would want to create an entertaining trivia game that is simple but engaging, that will include 6 music genres.
-2. As a developer, the code would be DRY and simple to understand.
-3. As a developer, percentages and ‘em’ measurements will be used for dynamic styling.
-4. As a developer,  local storage will be used for data persistence.
-5. As a developer, the main pages will include an index page, an ‘About us’ page, and the genre pages.*
+1. As a developer, I would want to create an entertaining trivia game that is simple but engaging, that will<br> include 6 music genres.
+2. As a developer, the code would be DRY and simple to understand.<br>
+3. As a developer, percentages and ‘em’ measurements will be used for dynamic styling.<br>
+4. As a developer,  local storage will be used for data persistence.<br>
+5. As a developer, the main pages will include an index page, an ‘About us’ page, and the genre pages.*<br>
 
 ## Code Example
 
@@ -31,26 +31,26 @@ N/A
 
 ## Tests
 
-Procedure description:
-1. Answering the first form on the home page by writing down your name.
-2. A series of 6 questions comprising of songs from six genres will be shown on the screen in consecutive order.
-3. An audio control is on top of each selection. Try to choose the correct answer by guessing the name of the song.
-4. Once all questions have been answered, the page will re-direct to the "About Us" page.
-5. From here, the user can navigate back to the home page, restart the game, or reload.
+Procedure description:<br>
+1. Answering the first form on the home page by writing down your name.<br>
+2. A series of 6 questions comprising of songs from six genres will be shown on the screen in consecutive order.<br>
+3. An audio control is on top of each selection. Try to choose the correct answer by guessing the name of the song.<br>
+4. Once all questions have been answered, the page will re-direct to the "About Us" page.<br>
+5. From here, the user can navigate back to the home page, restart the game, or reload.<br>
 
 ## Contributors
 
-Elyanil Castro
-Eve Denison
-Ronel Rustia
+*1.Elyanil Castro<br>
+2. Eve Denison<br>
+3. Ronel Rustia<br>*
 
 ## Sources
 
-https://unsplash.com/@sorenastrup664
-https://unsplash.com/@edgr
-https://unsplash.com/@anthonydelanoix
-https://unsplash.com/@28mm
-https://unsplash.com/@ajoreilly
+https://unsplash.com/@sorenastrup664<br>
+https://unsplash.com/@edgr<br>
+https://unsplash.com/@anthonydelanoix<br>
+https://unsplash.com/@28mm<br>
+https://unsplash.com/@ajoreilly<br>
 
 ## License
 
