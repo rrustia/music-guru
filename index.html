@@ -30,14 +30,13 @@
   </nav>
 </header>
 <body id="home-background">
-  <p id="intro">Welcome to the Music Guru!  <br>Test your inner Guru by playing this trivia game <br>created for your listening and guessing pleasure!<br><img id="logo" src="./pics/logo-small.png" alt="Music Guru logo"></p>
   <main>
     <form id="name-form">
       <fieldset>
         <legend>Name</legend>
-        <label id="name-top" for="name">Let's Begin! <br>Please tell us your name:</label>
+        <label id="name-top" for="name">Let's Begin!<span id="name-line-break"></span>Please tell us your name:</label>
         <br><input name="name" id="name-input" required="required" pattern="[a-zA-Z]+" maxlength="12" placeholder="(Ex: John)" type="text"/>
-        <br><button id="submit-button">Submit</button>
+        <br><button id="submit-button"><span id="submit-button-text">Activate Guru</span></button>
         <span id="post-submit-mess"></span>
       </fieldset>
     </form>

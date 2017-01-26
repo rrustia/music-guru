@@ -16,11 +16,7 @@ header {
   text-align: center;
   padding-right: 1em;
   padding-left: 1em;
-  background-color: #B8E1FF;
-  opacity: 0.7;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+
 
 }
 
@@ -38,7 +34,7 @@ h1 {
 
   font-family: 'Sofia', cursive;
   font-size: 40px;
-  color: black;
+  color: white;
   opacity: none;
   display: inline;
   padding-left: 1em;
@@ -56,63 +52,44 @@ ul {
 /*target different items in nav bar for detailed stlying*/
 #nav-about, #nav-index, #nav-bar, #nav-country, #nav-class-rock, #nav-jazz, #nav-pop, #nav-rap, #nav-edm {
 
-  color: #AA0D86;
+  color: #C7EDF0;
   padding-right: 1em;
   padding-left: 1em;
   text-decoration: none;
 
 }
 
-#intro {
 
-  background-color: #BCB6FF;
-  opacity: 0.7;
-  font-family: 'Rancho', cursive;
-  font-size: 25px;
-  color: black;
-  text-align: center;
-  margin-top: 3em;
-  margin-right: 15em;
-  margin-bottom: 0.5em;
-  margin-left: 15em;
-  padding-top: 0.5em;
-  padding-right: 2em;
-  padding-bottom: 0;
-  padding-left: 2em;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
-  min-width: 20%;
-
-}
-
-#logo {
+/*#logo {
 
 display: inline-block;
 height: 50%;
 width: 50%;
 opacity: 2;
-}
+}*/
 
 fieldset {
 
 border: none;
 font-family: 'Annie Use Your Telescope', cursive;
-font-size: 25px;
+color: white;
+font-size: 30px;
 text-align: center;
 margin-top: 2em;
 padding-top: 0;
-background-color: #A9FFF7;
-opacity: 0.7;
--webkit-border-radius: 16px;
--moz-border-radius: 16px;
-border-radius: 16px;
+
 
 }
 
 legend {
 
 visibility: hidden;
+
+}
+
+#name-line-break {
+
+display: block;
 
 }
 #name-form{
@@ -122,17 +99,24 @@ visibility: hidden;
 }
 #submit-button {
 
-background-color: #9894D3;
-font-family: 'Annie Use Your Telescope', cursive;
-font-size: 20px;
-font-weight: bold;
-opacity: 0.7%;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
+background-color: inherit;
+border-radius: 0;
+border: 3px white ridge;
+padding: 0;
 
 }
 
+#submit-button-text {
+
+  font-family: 'Annie Use Your Telescope', cursive;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 0;
+  padding-right: 1em;
+  padding-bottom: 0;
+  padding-left: 1em;
+}
 /*If input is correct, text field is green. Otherwise, text field is red.*/
 #name-input:focus:valid {
 	background: rgb(220, 255, 220);
@@ -144,7 +128,7 @@ border-radius: 10px;
 
 #home-background {
 
-  background-image: url(./pics/background-home.jpg);
+  background-image: url(./pics/background-home-3.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
