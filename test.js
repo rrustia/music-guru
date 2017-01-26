@@ -1,5 +1,6 @@
 'use strict';
 
+// if counter is not set then set it equal to 1, otherwise just add 1 to it
 if (!(localStorage.getItem('counter'))) {
   localStorage.setItem('counter', 1);
 } else {
@@ -17,12 +18,6 @@ function getName(){
   event.stopPropagation();
   var userName = event.target.name.value;
   localStorage.setItem('name',userName);
-  var postSubmitEl = document.getElementById('post-submit-mess');
-  var text = document.createTextNode('Thank you, ' + userName + ' please select a genre that you enjoy from above to test your inner Music Guru!');
-  var pEl = document.createElement('p');
-  pEl.appendChild(text);
-  postSubmitEl.appendChild(pEl);
-  document.location.href = 'about.html';
 }
 
 //Gets input choices
@@ -38,7 +33,7 @@ function getInput(){
     for(var i = 0; i < trackArr.length; i++){
       if(trackArr[i].checked){
         console.log('Inside of getInput: ' + trackArr[i].value);
-        track = trackArr[i].value;
+        track = trackArr[i];
         break;
       }
     }
@@ -48,21 +43,58 @@ function getInput(){
 //Helper function determines if user choice is correct
 function isCorrect(song){
   console.log('Inside of isCorrect: ' + song);
-  if(correctSongs.includes(song)){
+  //List gets next song
+  //console.log('Inside of isCorrect (nextPageCount): ' + nextPageCount);
+  getNextPage(song.value);
+  if(correctSongs.includes(song.value)){
+    //Redirects to next genre page
     alert('Correct.');
+    // document.location.href = getNextPage(song.value);;
+    location.reload();
   } else {
+    //Redirects to next genre page
+    //console.log('Inside of isCorrect: ' + nextPageCount);
     alert('Incorrect.');
+    // console.log('Inside of isCorrect: ' + nextPageCount);
+    if(getNextPage(song.value) === 'about.html'){
+      // document.location.href = getNextPage(song.value);
+      localStorage.clear();
+      document.location.href = 'about.html';
+    } else {
+      // document.location.href = getNextPage(song.value);
+      location.reload();
+    }
+  }
+}
+//Helper function determines next song
+function getNextPage(song){
+  var url = '';
+  //Global var nextPageCount - increments when user gets to next page
+  for (var i = 0; i < listOfSongs.length; i++){
+    console.log('Inside of getNextPage: ' + song);
+    if(listOfSongs[i].answers.includes(song)){
+      if(i !== listOfSongs.length - 1){
+        console.log('Next song path: ' + listOfSongs[i + 1].sitePath);
+        url = listOfSongs[i + 1].sitePath;
+        return url;
+        break;
+      } else {
+        return 'about.html';
+        console.log('Inside of getNextPage: Last page');
+      }
+    }
   }
 }
 
 // song object constructor
-function Song(name, path, answers, id, idTwo, formId) {
+function Song(name, path, answers, id, idTwo, formId, sitePath) {
   this.name = name; // name of the song
   this.path = path; // filepath of the song
   this.answers = answers; //array of 4 answer strings
   this.id = id; //array of 4 ID strings
   this.idTwo = idTwo; //id for audio controls
   this.formId = formId; //form id for each genre
+  this.sitePath = sitePath; //.html file for each genre
 }
 
 // random function to create an array with 4 random elements containing (0,1,2,3) that will determine the position of answer choices in html
@@ -87,7 +119,7 @@ function renderChoices(questionString, song) {
   displayAudioPlayer(song);
   // show choices menu
   var genreEl = document.getElementById(questionString);
-  for (var i = 0; i < randomList.length; i++) {
+  for (var i = 0; i < 4; i++) {
     var listEl = document.createElement('input');
     // set attribute of the Input tags that will be created.
     // randomList[i] will make sure the choices are random
@@ -102,9 +134,7 @@ function renderChoices(questionString, song) {
     $('input#' + song.id[randomList[i]]).after(song.answers[randomList[i]] + '<br>');
   };
   // if a particular form ID is present on the page then execute the particular listener
-  if (document.getElementById(song.formId)){
-    var formEl = document.getElementById(song.formId).addEventListener('submit', getInput, false);;
-  }
+  var formEl = document.getElementById(song.formId).addEventListener('submit', getInput, false);;
 };
 
 // Display the audio controls by hooking into tag with ID contained song.idTwo
@@ -122,27 +152,36 @@ function displayAudioPlayer(song){
 
 // collaboration Eve, Castro, Ron
 // initial data for song objects that includes song name, filepath, and possible answers
-var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['Kiss - I Wanna Rock And Roll All Night', 'Blue Oyster Cult - (Don\'t) Fear the Reaper', 'Aerosmith - Dream On', 'Fleetwood Mac - Go Your Own Way'], ['IWanna', 'Blue', 'Aerosmith', 'Fleetwood'],'classic-rock-radio','classic-rock-form');
+var rock = new Song('I Wanna Rock And Roll All Night','audio/classic-rock-kiss.mp3',['"I Wanna Rock And Roll All Night" by Kiss', '"(Don\'t) Fear the Reaper" by Blue Oyster Cult', '"Dream On" by Aerosmith', '"Go Your Own Way" by Fleetwood Mac'], ['IWanna', 'Blue', 'Aerosmith', 'Fleetwood'],'classic-rock-radio','classic-rock-form','classic-rock.html');
+//console.log('After rock instance: ' + rock.sitePath);
 
-var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['Capital Cities - Safe And Sound', 'The Weeknd - Staryboy', 'Alessia Cara - Scars to Your Beautiful', 'Shawn Mendes - Treat You Better'], ['Safe', 'The', 'Alessia', 'Shawn'],'pop-radio','pop-form');
+var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['"Safe And Sound" by Capital Cities', '"Starboy" by The Weeknd', '"Scars to Your Beautiful" by Alessia Cara', '"Treat You Better" by Shawn Mendes'], ['Safe', 'The', 'Alessia', 'Shawn'],'pop-radio','pop-form','pop.html');
 
-var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['Salt-N-Pepa - Push It', 'Bell Biv Devoe - Poison', 'Drake - Hotline Bling', 'Vanilla Ice - Ice Ice Baby'], ['Push', 'Bell', 'Poison', 'Drake'],'rap-radio','rap-form');
+var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['"Push It" by Salt-N-Pepa', '"Poison" by Bell Biv Devoe', '"Hotline Bling" by Drake', '"Ice Ice Baby" by Vanilla Ice'], ['Push', 'Bell', 'Poison', 'Drake'],'rap-radio','rap-form','rap.html');
 
-var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['Kenny Chesney - Anything But Mine','Taylor Swift - Bad Blood', 'Garth Brooks - Friends In Low Places','Luke Bryan - Country Girl (Shake It For Me)'], ['Anything', 'Taylor', 'Garth', 'Luke'],'country-radio','country-form');
+var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['"Anything But Mine" by Kenny Chesney','"Bad Blood" by Taylor Swift', '"Friends In Low Places" by Garth Brooks','"Country Girl (Shake It For Me) by "Luke Bryan'], ['Anything', 'Taylor', 'Garth', 'Luke'],'country-radio','country-form','country.html');
 
-var edm = new Song('One More Time', 'audio/edm-clip-daft-punk.mp3', ['Daft Punk - One More Time','The Chainsmokers - Closer','Daft Punk - Get Lucky','Major Lazer & DJ Snake - Lean On'], ['Daft', 'The', 'Daf', 'Major'],'edm-radio','edm-form');
+var edm = new Song('One More Time', 'audio/edm-clip-daft-punk.mp3', ['"One More Time" by Daft Punk','"Closer" by The Chainsmokers','"Get Lucky" by Daft Punk','"Lean On" by Major Lazer & DJ Snake'], ['Daft', 'The', 'Daf', 'Major'],'edm-radio','edm-form','edm.html');
 
-var jazz = new Song('What a Wonderful World', 'audio/Louis-Armstrong-What-a-Wonderful-World.mp3', ['Louis Armstrong - What a Wonderful World','Getz and Gilberto - The Girl From Ipanema','Mingus Ah Um - Goodbye, Pork Pie Hat','That\'s All - Mack the Knife'], ['What', 'Getz', 'Mingus', 'That'],'jazz-radio','jazz-form');
+var jazz = new Song('What a Wonderful World', 'audio/Louis-Armstrong-What-a-Wonderful-World.mp3', ['"What a Wonderful World" by Louis Armstrong','"The Girl From Ipanema" by Getz and Gilberto','"Goodbye, Pork Pie Hat" by Mingus Ah Um','That\'s All - Mack the Knife'], ['What', 'Getz', 'Mingus', 'That'],'jazz-radio','jazz-form','jazz.html');
 //Global answerArr
 var correctSongs = [];
-correctSongs.push(rock.answers[0]);
-correctSongs.push(pop.answers[0]);
-correctSongs.push(rap.answers[0]);
 correctSongs.push(country.answers[0]);
+correctSongs.push(rock.answers[0]);
 correctSongs.push(edm.answers[0]);
+correctSongs.push(pop.answers[0]);
 correctSongs.push(jazz.answers[0]);
+correctSongs.push(rap.answers[0]);
 
-// // works with a counter in localStorage
+var listOfSongs = [];
+listOfSongs.push(country);
+listOfSongs.push(rock);
+listOfSongs.push(edm);
+listOfSongs.push(pop);
+listOfSongs.push(jazz);
+listOfSongs.push(rap);
+
+// works with a counter in localStorage
 function setPage() {
   switch (localStorage.getItem('counter')) {
   case '1':
