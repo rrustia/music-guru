@@ -108,6 +108,13 @@ display: block;
   margin-top: 1em;
 
 }
+
+#submit-button:hover{
+
+  background-color: #1C2541;
+
+}
+
 #submit-button {
 
 background-color: inherit;
