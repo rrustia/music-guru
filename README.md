@@ -5,12 +5,12 @@
 Mentally, this project is to test our ability to work as a group. And also to show ourselves how far we've come in comparison to where we were in the beginning of the class. Technically, this is to test our skill by developing a problem and creating a solution that is achievable within the given time-frame.
 For this particular project, the problem domain will be as follows,
 
-User Stories:
+*User Stories:
 1. As a developer, I would want to create an entertaining trivia game that is simple but engaging, that will include 6 music genres.
 2. As a developer, the code would be DRY and simple to understand.
 3. As a developer, percentages and ‘em’ measurements will be used for dynamic styling.
 4. As a developer,  local storage will be used for data persistence.
-5. As a developer, the main pages will include an index page, an ‘About us’ page, and the genre pages.
+5. As a developer, the main pages will include an index page, an ‘About us’ page, and the genre pages.*
 
 ## Code Example
 
@@ -22,12 +22,12 @@ We decided to chose this project among many because it seems appropriate to the 
 
 ## Installation
 
-To get to the project, just cut and paste this link to your browser URL field and press "Enter".
+To get to the project, just cut and paste this link to your browser URL field and press "Enter".<br>
 https://rrustia.github.io/music-guru/
 
 ## API Reference
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+N/A
 
 ## Tests
 
