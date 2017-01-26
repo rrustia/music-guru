@@ -165,6 +165,21 @@ padding: 0;
   background-size: cover;
 
 }
+/*p elements on about.html*/
+.about-us-blurb {
+  font-family: 'Annie Use Your Telescope', cursive;
+  background-color: lime;
+  font-size: 1.2em;
+  width: 400px;
+  display: block;
+}
+/*main tag on about.html*/
+#about-us-main {
+  margin: auto;
+  width: 50%;
+  background-color: yellow;
+}
+
 
 /*  Title:   font-family: 'Sofia', cursive;*/
 /*Body:    font-family: 'Rancho', cursive;*/

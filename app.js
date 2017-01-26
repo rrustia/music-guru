@@ -11,11 +11,6 @@ function getName(){
   event.stopPropagation();
   var userName = event.target.name.value;
   localStorage.setItem('name',userName);
-  var postSubmitEl = document.getElementById('post-submit-mess');
-  var text = document.createTextNode('Thank you, ' + userName + ' please select a genre that you enjoy from above to test your inner Music Guru!');
-  var pEl = document.createElement('p');
-  pEl.appendChild(text);
-  postSubmitEl.appendChild(pEl);
 }
 
 //Gets input choices
