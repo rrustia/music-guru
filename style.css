@@ -197,7 +197,27 @@ padding: 0;
   position: fixed;
 
 }
-#about-us-images {
+#about-us-images-1 {
+
+  display: inline-block;
+  float:left;
+  padding-left: 0.5em;
+  padding-right: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+#about-us-images-2 {
+
+  display: inline-block;
+  float:left;
+  padding-left: 0.5em;
+  padding-right: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+#about-us-images-3 {
 
   display: inline-block;
   float:left;
