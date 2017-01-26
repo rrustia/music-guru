@@ -11,6 +11,7 @@ function getName(){
   event.stopPropagation();
   var userName = event.target.name.value;
   localStorage.setItem('name',userName);
+  document.location.href = 'country.html';
 }
 
 //Gets input choices
