@@ -1,6 +1,6 @@
 'use strict';
 //Displays name (from input) on each genre page
-if(localStorage.length > 0) {
+if (!(localStorage.getItem('name'))) {
   console.log('Retrieving from localStorage: ' + localStorage.getItem('name'));
   var nameContainerEl = document.getElementById('name-container');
   console.log('Name.html location for p element: ' + nameContainerEl );

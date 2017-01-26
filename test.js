@@ -1,5 +1,11 @@
 'use strict';
 
+if (!(localStorage.getItem('counter'))) {
+  localStorage.setItem('counter', 1);
+} else {
+  localStorage.setItem('counter', Number(localStorage.getItem('counter')) + 1);
+}
+
 //Implements name from input functionailty
 if (document.getElementById('name-form')) {
   var formEl = document.getElementById('name-form').addEventListener('submit', getName ,false);
@@ -81,7 +87,7 @@ function renderChoices(questionString, song) {
   displayAudioPlayer(song);
   // show choices menu
   var genreEl = document.getElementById(questionString);
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < randomList.length; i++) {
     var listEl = document.createElement('input');
     // set attribute of the Input tags that will be created.
     // randomList[i] will make sure the choices are random
@@ -136,6 +142,49 @@ correctSongs.push(country.answers[0]);
 correctSongs.push(edm.answers[0]);
 correctSongs.push(jazz.answers[0]);
 
+// // works with a counter in localStorage
+function setPage() {
+  switch (localStorage.getItem('counter')) {
+  case '1':
+    document.getElementsByTagName('body')[0].setAttribute('id', 'country-background');
+    document.getElementsByTagName('div')[1].setAttribute('id', 'country-radio');
+    document.getElementsByTagName('form')[0].setAttribute('id', 'country-form');
+    document.getElementsByTagName('div')[2].setAttribute('id', 'country-question');
+    break;
+  case '2':
+    document.getElementsByTagName('body')[0].setAttribute('id', 'classic-rock-background');
+    document.getElementsByTagName('div')[1].setAttribute('id', 'classic-rock-radio');
+    document.getElementsByTagName('form')[0].setAttribute('id', 'classic-rock-form');
+    document.getElementsByTagName('div')[2].setAttribute('id', 'classic-rock-question');
+    break;
+  case '3':
+    document.getElementsByTagName('body')[0].setAttribute('id', 'edm-background');
+    document.getElementsByTagName('div')[1].setAttribute('id', 'edm-radio');
+    document.getElementsByTagName('form')[0].setAttribute('id', 'edm-form');
+    document.getElementsByTagName('div')[2].setAttribute('id', 'edm-question');
+    break;
+  case '4':
+    document.getElementsByTagName('body')[0].setAttribute('id', 'jazz-background');
+    document.getElementsByTagName('div')[1].setAttribute('id', 'jazz-radio');
+    document.getElementsByTagName('form')[0].setAttribute('id', 'jazz-form');
+    document.getElementsByTagName('div')[2].setAttribute('id', 'jazz-question');
+    break;
+  case '5':
+    document.getElementsByTagName('body')[0].setAttribute('id', 'pop-background');
+    document.getElementsByTagName('div')[1].setAttribute('id', 'pop-radio');
+    document.getElementsByTagName('form')[0].setAttribute('id', 'pop-form');
+    document.getElementsByTagName('div')[2].setAttribute('id', 'pop-question');
+    break;
+  case '6':
+    document.getElementsByTagName('body')[0].setAttribute('id', 'rap-background');
+    document.getElementsByTagName('div')[1].setAttribute('id', 'rap-radio');
+    document.getElementsByTagName('form')[0].setAttribute('id', 'rap-form');
+    document.getElementsByTagName('div')[2].setAttribute('id', 'rap-question');
+    break;
+  default: break;
+  };
+}
+
 function determineGenre () {
 // this boolean test will determine which genre page is currently loaded and render the appropriate song object
   var questionString;
@@ -164,6 +213,9 @@ function determineGenre () {
     renderChoices(questionString, rap);
   };
 }
+
+setPage(); // using localStorage to index the correct type of genre html to be rendered;
+// localStorage counter will be incremented by page transition.
 
 // initiate genre when page is loaded.
 determineGenre ();

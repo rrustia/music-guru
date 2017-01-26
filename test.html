@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Music Guru | Jazz</title>
+  <title>Music Guru | Country</title>
   <link rel="stylesheet" type="text/css" href="genre.css" />
   <!-- Title font -->
   <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
@@ -16,32 +16,33 @@
 </head>
 <header>
   <nav>
-    <ul>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
+    <!-- Ron, Keith, Castro and Eve collaborated html scaffolding -->
+    <ul class="nav-bar">
+      <a id="nav-index" href="index.html">Home</a>
+      <a id="nav-about" href="about.html">About Us</a>
       <h1>Music Guru</h1>
-      <a href="country.html">Country</a>
-      <a href="classic-rock.html">Classic Rock</a>
-      <a href="edm.html">EDM</a>
-      <a href="pop.html">Pop</a>
-      <a href="jazz.html">Jazz</a>
-      <a href="rap.html">Rap</a>
+      <a id="nav-country" href="country.html">Country</a>
+      <a id="nav-class-rock" href="classic-rock.html">Classic Rock</a>
+      <a id="nav-edm" href="edm.html">EDM</a>
+      <a id="nav-pop" href="pop.html">Pop</a>
+      <a id="nav-jazz" href="jazz.html">Jazz</a>
+      <a id="nav-rap" href="rap.html">Rap</a>
     </ul>
   </nav>
 </header>
-<body id="jazz-background">
-  <main id="jazz-form">
+<body> <!-- get body tag and modify attribute -->
+  <main>
     <!--Render's name from user input-->
-    <div id="name-container"></div>
-    <div id="jazz-radio"></div>
-    <form >
+    <div></div> <!--this ID is used to hook up to, to create radio element -->
+    <div></div>  <!--search for second div sibling and modify attribute. -->
+    <form> <!--get by tag and modify attribute-->
       <fieldset>
-        <div id="jazz-question"></div>
+        <div></div> <!-- get third div tag, and modify attribute -->
         <button id="submit-button">Submit</button>
       </fieldset>
     </form>
   </main>
 </body>
 <script src="name.js"></script>
-<script src="app.js"></script>
+<script src="test.js"></script>
 </html>
