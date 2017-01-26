@@ -85,6 +85,8 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  color: white;
+  font-size: 20px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -98,6 +100,8 @@ ul {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    color: white;
+    font-size: 20px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -112,6 +116,8 @@ ul {
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
+      color: white;
+      font-size: 20px;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -125,6 +131,8 @@ ul {
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
+        color: white;
+        font-size: 20px;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -138,6 +146,8 @@ ul {
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
+        color: white;
+        font-size: 20px;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -152,6 +162,8 @@ ul {
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
+        color: white;
+        font-size: 20px;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

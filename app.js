@@ -11,6 +11,7 @@ function getName(){
   event.stopPropagation();
   var userName = event.target.name.value;
   localStorage.setItem('name',userName);
+  document.location.href = 'country.html';
 }
 
 //Gets input choices
@@ -150,7 +151,7 @@ var pop = new Song('Safe And Sound', 'audio/clip_safe_and_sound.mp3', ['"Safe An
 
 var rap = new Song('Push It', 'audio/Salt-N-Pepa-Push-It-clip.mp3', ['"Push It" by Salt-N-Pepa', '"Poison" by Bell Biv Devoe', '"Hotline Bling" by Drake', '"Ice Ice Baby" by Vanilla Ice'], ['Push', 'Bell', 'Poison', 'Drake'],'rap-radio','rap-form','rap.html');
 
-var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['"Anything But Mine" by Kenny Chesney','"Bad Blood" by Taylor Swift', '"Friends In Low Places" by Garth Brooks','"Country Girl (Shake It For Me) by "Luke Bryan'], ['Anything', 'Taylor', 'Garth', 'Luke'],'country-radio','country-form','country.html');
+var country = new Song('Anything But Mine', 'audio/clip_anything_but_mine.mp3', ['"Anything But Mine" by Kenny Chesney','"Bad Blood" by Taylor Swift', '"Friends In Low Places" by Garth Brooks','"Country Girl (Shake It For Me)" by Luke Bryan'], ['Anything', 'Taylor', 'Garth', 'Luke'],'country-radio','country-form','country.html');
 
 var edm = new Song('One More Time', 'audio/edm-clip-daft-punk.mp3', ['"One More Time" by Daft Punk','"Closer" by The Chainsmokers','"Get Lucky" by Daft Punk','"Lean On" by Major Lazer & DJ Snake'], ['Daft', 'The', 'Daf', 'Major'],'edm-radio','edm-form','edm.html');
 

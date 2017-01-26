@@ -174,13 +174,14 @@ padding: 0;
   display: block;
 }
 /*main tag on about.html*/
-#about-us-main {
-  margin: auto;
+#about-us-container-one {
   width: 50%;
-  background-color: yellow;
+  background: #ffa7a7;
+  margin: auto;
 }
 
 
 /*  Title:   font-family: 'Sofia', cursive;*/
 /*Body:    font-family: 'Rancho', cursive;*/
 /*Form:   font-family: 'Annie Use Your Telescope', cursive;*/
+/*Submit: font-family: 'Smythe', cursive;*/
