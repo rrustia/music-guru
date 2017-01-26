@@ -3,10 +3,10 @@
 ## Synopsis
 
 Mentally, this project is to test our ability to work as a group. And also to show ourselves how far we've come in comparison to where we were in the beginning of the class. Technically, this is to test our skill by developing a problem and creating a solution that is achievable within the given time-frame.
-For this particular project, the problem domain will be as follows,
+For this particular project, the problem domain will be as follows:<br>
 
-*User Stories:
-1. As a developer, I would want to create an entertaining trivia game that is simple but engaging, that will<br> include 6 music genres.
+###User Stories:<br>
+*1. As a developer, I would want to create an entertaining trivia game that is simple but engaging, that will include 6 music genres.<br>
 2. As a developer, the code would be DRY and simple to understand.<br>
 3. As a developer, percentages and ‘em’ measurements will be used for dynamic styling.<br>
 4. As a developer,  local storage will be used for data persistence.<br>
@@ -40,17 +40,17 @@ Procedure description:<br>
 
 ## Contributors
 
-*1.Elyanil Castro<br>
-2. Eve Denison<br>
-3. Ronel Rustia<br>*
+*Elyanil Castro<br>
+Eve Denison<br>
+Ronel Rustia<br>*
 
 ## Sources
 
-https://unsplash.com/@sorenastrup664<br>
-https://unsplash.com/@edgr<br>
-https://unsplash.com/@anthonydelanoix<br>
-https://unsplash.com/@28mm<br>
-https://unsplash.com/@ajoreilly<br>
+1. https://unsplash.com/@sorenastrup664<br>
+2. https://unsplash.com/@edgr<br>
+3. https://unsplash.com/@anthonydelanoix<br>
+4. https://unsplash.com/@28mm<br>
+5. https://unsplash.com/@ajoreilly<br>
 
 ## License
 
